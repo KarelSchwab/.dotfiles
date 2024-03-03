@@ -93,6 +93,8 @@
             alacritty
         ];
     };
+
+    programs.neovim.defaultEditor = true;
     
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;

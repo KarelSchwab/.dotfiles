@@ -181,14 +181,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3-exit lock, mode "default"
-    bindsym e exec --no-startup-id i3-exit logout, mode "default"
-    bindsym s exec --no-startup-id i3-exit shutdown, mode "default"
-    bindsym h exec --no-startup-id i3-exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3-exit reboot, mode "default"
+    bindsym l exec --no-startup-id i3lock, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id shutdown now, mode "default"
+    bindsym r exec --no-startup-id reboot, mode "default"
     bindsym Shift+s exec --no-startup-id i3-exit shutdown, mode "default"
 
     # back to normal: Enter or Escape
@@ -249,11 +248,7 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# exec_always --no-startup-id /usr/bin/feh --randomize --bg-fill $HOME/.config/i3/gruvbox/*
 exec_always feh --bg-scale $HOME/Pictures/forest.jpg
-# set $polybarpath ~/.config/polybar
 
-# Launch Polybar
-# exec_always --no-startup-id $polybarpath/launch.sh
-
+# Configure monitors
 exec xrandr --output HDMI-1-0 --auto --left-of eDP-1
