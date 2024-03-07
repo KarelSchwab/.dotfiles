@@ -210,6 +210,7 @@ gaps outer 2
 # finds out, if available)
 bar {
         status_command i3status
+        position top
 }
 # Review the lines below and append to ~/.config/i3/config
 

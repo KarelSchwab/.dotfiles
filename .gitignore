@@ -1,2 +1,6 @@
 nvim/.config/nvim/undodir
 nvim/.config/nvim/undodir/*
+
+# TODO: Fix this
+i3/.config/i3/i3-volume
+i3/.config/i3/i3-volume/*
