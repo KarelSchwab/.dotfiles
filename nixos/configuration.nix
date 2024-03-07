@@ -122,6 +122,10 @@
         fd
         networkmanagerapplet
         feh
+        pavucontrol
+        alsa-utils
+        spotify
+        playerctl
     ];
     
     # Some programs need SUID wrappers, can be configured further or are
